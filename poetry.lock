@@ -1,41 +1,29 @@
 [[package]]
 name = "aiohttp"
-version = "3.8.1"
+version = "3.7.4.post0"
 description = "Async http client/server framework (asyncio)"
 category = "main"
 optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-aiosignal = ">=1.1.2"
-async-timeout = ">=4.0.0a3,<5.0"
+async-timeout = ">=3.0,<4.0"
 attrs = ">=17.3.0"
-charset-normalizer = ">=2.0,<3.0"
-frozenlist = ">=1.1.1"
+chardet = ">=2.0,<5.0"
 multidict = ">=4.5,<7.0"
+typing-extensions = ">=3.6.5"
 yarl = ">=1.0,<2.0"
 
 [package.extras]
-speedups = ["aiodns", "brotli", "cchardet"]
-
-[[package]]
-name = "aiosignal"
-version = "1.2.0"
-description = "aiosignal: a list of registered asynchronous callbacks"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-frozenlist = ">=1.1.0"
+speedups = ["aiodns", "brotlipy", "cchardet"]
 
 [[package]]
 name = "async-timeout"
-version = "4.0.2"
+version = "3.0.1"
 description = "Timeout context manager for asyncio programs"
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.5.3"
 
 [[package]]
 name = "attrs"
@@ -58,6 +46,14 @@ description = "Python package for providing Mozilla's CA Bundle."
 category = "main"
 optional = false
 python-versions = ">=3.6"
+
+[[package]]
+name = "chardet"
+version = "4.0.0"
+description = "Universal encoding detector for Python 2 and 3"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "charset-normalizer"
@@ -98,6 +94,32 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "discord"
+version = "1.7.3"
+description = "A mirror package for discord.py. Please install that instead."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+"discord.py" = ">=1.7.3"
+
+[[package]]
+name = "discord.py"
+version = "1.7.3"
+description = "A Python wrapper for the Discord API"
+category = "main"
+optional = false
+python-versions = ">=3.5.3"
+
+[package.dependencies]
+aiohttp = ">=3.6.0,<3.8.0"
+
+[package.extras]
+docs = ["sphinx (==3.0.3)", "sphinxcontrib-trio (==1.1.2)", "sphinxcontrib-websupport"]
+voice = ["PyNaCl (>=1.3.0,<1.5)"]
+
+[[package]]
 name = "flask"
 version = "2.2.1"
 description = "A simple framework for building complex web applications."
@@ -115,14 +137,6 @@ Werkzeug = ">=2.2.0"
 [package.extras]
 async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
-
-[[package]]
-name = "frozenlist"
-version = "1.3.1"
-description = "A list-like structure which implements collections.abc.MutableSequence"
-category = "main"
-optional = false
-python-versions = ">=3.7"
 
 [[package]]
 name = "idna"
@@ -469,20 +483,21 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "5272789fa19d0f98d7826ffaa2db1913876d7235622c4291178a3a1b8466e3c1"
+content-hash = "8d9f13effb6c2c43cb78c211ecd164ca5aba0f39d61a71d41cbbbfe06a80bea5"
 
 [metadata.files]
 aiohttp = []
-aiosignal = []
 async-timeout = []
 attrs = []
 certifi = []
+chardet = []
 charset-normalizer = []
 click = []
 colorama = []
 debugpy = []
+discord = []
+"discord.py" = []
 flask = []
-frozenlist = []
 idna = []
 importlib-metadata = []
 itsdangerous = []
