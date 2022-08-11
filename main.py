@@ -15,13 +15,12 @@ async def on_message(message):
   if author.bot:
     return
   else:
-    if message.content == "$----------------------------------":
+    if message.content == "$save":
       if author.id not in CURRENT_MODS:
         CURRENT_MODS.append(author.id)
         #DO
         CURRENT_MODS.remove(author.id)
-    
-    elif message.content == "$----------------------------------":
+    elif message.content == "$get":
       if author.id not in CURRENT_MODS:
         CURRENT_MODS.append(author.id)
         #DO
