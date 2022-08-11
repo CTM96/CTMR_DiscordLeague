@@ -39,7 +39,7 @@ async def getMarked(message) -> list:
   serverId = str(message.guild.id)
   markedKey = serverId + "_" + "MARKED"
   if markedKey not in db.keys():
-    message.channel.send("ERROR - SOMETING WENT WRONG. THERE IS NO MARKED FOR THIS SERVER")
+    await message.channel.send("ERROR - SOMETING WENT WRONG. THERE IS NO MARKED FOR THIS SERVER")
     return
   playerMarked = []
   for x in db[markedKey]:
